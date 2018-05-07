@@ -1,18 +1,25 @@
 * {
-  box-sizing: border-box;
-  font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
+    box-sizing: border-box;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
 }
+
 html {
-  font-size: 62.5%;
-  background: radial-gradient(ellipse at center, $base 0, $darken 80%, $back 100%);
+    font-size: 10px;
 }
+@media only screen and (min-width:1400px) {
+    html {
+        font-size: 12px;
+    }
+}
+
 body {
-  font: 300 13px/1.6 'Helvetica Neue', Helvetica, Arial;
-  color: #444;
-  transition: all .4s .3s ease-in;
+    font: 300 1.4rem/2.2rem 'Montserrat', Helvetica, Arial;
+    color: #444;
 }
-body,html{
-	min-height: 100vh;
-	overflow: hidden;
+
+body,
+html {
+    min-height: 100vh;
+    overflow-x: hidden;
 }

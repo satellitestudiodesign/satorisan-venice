@@ -1,3 +1,7 @@
-$base : #F7F6F0;
-$darken : darken(#F7F6F0 , 30%);
-$back: darken(#F7F6F0, 40%);
+$sidebarwidth: 17rem;
+
+$brand-blue: #659CBE;
+$brand-blue-hover: darken($brand-blue, 10%);
+
+$brand-green: #8CBF3C;
+$brand-green-hover: darken($brand-green, 10%);
