@@ -51,17 +51,24 @@
   $(window).on('resize', showOrHideMenu);
 
   $(window).on('scroll', function () {
-    var position = $(this).scrollTop() + $(window).height() / 2;
+    var position = $(this).scrollTop();
 
     $('section').each(function () {
       var target = $(this).offset().top;
       var id = $(this).attr('id');
 
-      if (position >= target) {
+      if (position + $(window).height() / 2 >= target) {
         $('nav > a').removeClass('current');
         $('nav > a[href="#' + id + '"]').addClass('current');
       }
     });
+
+    if(position >=$(window).height()) {
+      $('.sidebar').addClass('fixed');
+    } else {
+      $('.sidebar').removeClass('fixed');
+    }
+
   });
 
   $(".lazy").unveil(null, function () {
