@@ -517,7 +517,8 @@ section {
   z-index: 2;
   background: url("../img/portada.jpg");
   background-size: cover;
-  background-position: center bottom; }
+  background-position: center bottom;
+  background-repeat: no-repeat; }
   .cover button {
     position: absolute;
     display: block;
