@@ -10,7 +10,7 @@
     e.preventDefault();
     $('.current').removeClass('current');
     $(this).addClass('current');
-    var offset = ($(window).height() - $($(this).attr('href')).height()) / 2 - 50;
+    var offset = ($(window).height() - $($(this).attr('href')).height()) / 2;
     if (offset < 0) { offset = 0; }
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top - offset
@@ -49,6 +49,20 @@
   showOrHideMenu();
 
   $(window).on('resize', showOrHideMenu);
+
+  $(window).on('scroll', function () {
+    var position = $(this).scrollTop() + $(window).height() / 2;
+
+    $('section').each(function () {
+      var target = $(this).offset().top;
+      var id = $(this).attr('id');
+
+      if (position >= target) {
+        $('nav > a').removeClass('current');
+        $('nav > a[href="#' + id + '"]').addClass('current');
+      }
+    });
+  });
 
   $(".lazy").unveil(null, function () {
     $(this).load(function () {

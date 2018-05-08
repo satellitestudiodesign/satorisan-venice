@@ -15,10 +15,6 @@
 html {
   font-size: 10px; }
 
-@media only screen and (min-width: 1400px) {
-  html {
-    font-size: 12px; } }
-
 body {
   font: 300 1.4rem/2.2rem 'Montserrat', Helvetica, Arial;
   color: #444; }
@@ -443,7 +439,7 @@ textarea {
   max-width: 90rem; }
 
 section {
-  padding: 5rem 0; }
+  margin: 20vh 0; }
   section > p {
     max-width: 60ch;
     margin: 2rem; }
@@ -575,7 +571,7 @@ h3 {
   line-height: 1.5em;
   font-weight: 300;
   text-transform: uppercase;
-  margin-top: 1rem; }
+  margin: 0; }
   h3.inline {
     float: left;
     margin-right: 1ch; }
@@ -706,11 +702,15 @@ ul {
   #useexamples h3 {
     color: initial; } }
 
-@media only screen and (min-width: 1400px) {
-  .full-images img {
-    height: 70rem; }
+@media only screen and (min-width: 1500px) {
+  html {
+    font-size: 12px; } }
+
+@media only screen and (min-width: 1800px) {
   .content-wrapper {
-    max-width: 120rem; } }
+    max-width: 120rem; }
+  .full-images img {
+    height: 70rem; } }
 
 @media print {
   * {

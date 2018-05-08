@@ -56,15 +56,22 @@
     }
 }
 
-@media only screen and (min-width:1400px) {
+@media only screen and (min-width:1500px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (min-width:1800px) {
+    .content-wrapper {
+        max-width: 120rem;
+    }
     .full-images {
         img {
             height: 70rem;
         }
     }
-    .content-wrapper {
-        max-width: 120rem;
-    }
+
 }
 
 @media print,
