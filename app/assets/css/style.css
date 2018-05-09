@@ -411,7 +411,7 @@ textarea {
   width: 17rem;
   float: left;
   position: absolute;
-  overflow-y: scroll;
+  overflow: hidden;
   left: 0;
   transition: all 200ms linear; }
   .sidebar.hidden {
@@ -420,10 +420,18 @@ textarea {
     cursor: pointer;
     display: block;
     width: 100%;
-    height: auto; }
+    height: auto;
+    transition: transform 300ms ease-out; }
+    .sidebar > .logo#logo-venice {
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%); }
   .sidebar.fixed {
     position: fixed;
-    top: 0; }
+    top: 0;
+    overflow-y: scroll; }
+    .sidebar.fixed #logo-venice {
+      -ms-transform: translateY(0);
+          transform: translateY(0); }
 
 .main {
   position: absolute;
