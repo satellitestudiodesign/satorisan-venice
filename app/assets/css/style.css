@@ -732,6 +732,8 @@ ul {
       .two-columns .column h2.inline {
         -ms-transform: translateY(0.5em);
             transform: translateY(0.5em); }
+  .one-column ul {
+    margin: 0 2rem; }
   .full-images .content {
     position: relative;
     margin: 0 1rem; }
