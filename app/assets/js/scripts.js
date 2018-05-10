@@ -53,6 +53,7 @@
   $('.lazy').unveil(null, function () {
     $(this).load(function () {
       this.style.opacity = 1;
+      this.style.height = 'auto';
     });
   });
 
