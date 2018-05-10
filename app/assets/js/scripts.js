@@ -14,6 +14,7 @@
     // FastShell
   });
 
+  // Internal links with animated scroll
   $('a[href*="#"]').on('click', function (e) {
     e.preventDefault();
     $('.current').removeClass('current');
@@ -23,55 +24,24 @@
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top - offset
     }, 500);
+    if( $(window).width() <= 900 && $('.sidebar').hasClass('shown') ) toggleMobileMenu();
   });
-
-  var sidebar = $('.sidebar');
-  var main = $('.main');
-
-  function mouseMoveHandler(e) {
-    console.log("mousemove");
-    if (e.pageX < 200) {
-      sidebar.removeClass('hidden');
-      main.removeClass('full');
-    } else {
-      sidebar.addClass('hidden');
-      main.addClass('full');
-    }
-  }
-
-  function showOrHideMenu() {
-    var w = $(window).width();
-    if (w >= 1280) {
-      $(window).off('mousemove', mouseMoveHandler);
-      sidebar.removeClass('hidden');
-      main.removeClass('full');
-    } else if (w < 1280 && w > 900) {
-      $(window).off('mousemove', mouseMoveHandler)
-        .on('mousemove', mouseMoveHandler);
-    } else {
-      $(window).off('mousemove', mouseMoveHandler);
-      sidebar.addClass('hidden');
-      main.addClass('full');
-    }
-  }
-  showOrHideMenu();
-
-  $(window).on('resize', showOrHideMenu);
 
   $(window).on('scroll', function () {
     var position = $(this).scrollTop();
 
+    // Marks current section on the menu
     $('section').each(function () {
       var target = $(this).offset().top;
       var id = $(this).attr('id');
-
       if (position + $(window).height() / 2 >= target) {
         $('nav > a').removeClass('current');
         $('nav > a[href="#' + id + '"]').addClass('current');
       }
     });
 
-    if(position >=$(window).height()) {
+    //Fixes menu on desktop
+    if( $(window).width() > 900 && position >= $(window).height()) {
       $('.sidebar').addClass('fixed');
     } else {
       $('.sidebar').removeClass('fixed');
@@ -79,10 +49,16 @@
 
   });
 
-  $(".lazy").unveil(null, function () {
+  // Lazy loader for the images
+  $('.lazy').unveil(null, function () {
     $(this).load(function () {
       this.style.opacity = 1;
     });
   });
 
 })(jQuery, window, document);
+
+function toggleMobileMenu() {
+  $('.sidebar').toggleClass('shown');
+  $('.toggle').toggleClass('open');
+}
