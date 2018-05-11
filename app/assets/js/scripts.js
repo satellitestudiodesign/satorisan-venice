@@ -24,7 +24,7 @@
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top - offset
     }, 500);
-    if( $(window).width() <= 900 && $('.sidebar').hasClass('shown') ) toggleMobileMenu();
+    if ($(window).width() <= 900 && $('.sidebar').hasClass('shown')) toggleMobileMenu();
   });
 
   $(window).on('scroll', function () {
@@ -41,7 +41,7 @@
     });
 
     //Fixes menu on desktop
-    if( $(window).width() > 900 && position >= $(window).height()) {
+    if ($(window).width() > 900 && position >= $(window).height()) {
       $('.sidebar').addClass('fixed');
     } else {
       $('.sidebar').removeClass('fixed');
@@ -53,7 +53,7 @@
   $('.lazy').unveil(null, function () {
     $(this).load(function () {
       this.style.opacity = 1;
-      if($(this).parent().attr('id') === 'lookbook') this.style.height = 'auto';
+      if ($(this).parent().attr('id') === 'lookbook') this.style.height = 'auto';
     });
   });
 
@@ -63,3 +63,36 @@ function toggleMobileMenu() {
   $('.sidebar').toggleClass('shown');
   $('.toggle').toggleClass('open');
 }
+
+// Make playing on video stop others
+
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+  get: function(){
+      return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+  }
+})
+
+var videoTrailer = document.getElementById('video-trailer');
+var videoKeypoints = document.getElementById('video-keypoints');
+var videoWashable = document.getElementById('video-washable');
+
+videoTrailer.onclick = function() {
+  this.setAttribute('controls', 'controls');
+  this.play();
+  if (videoKeypoints.playing) videoKeypoints.pause();
+  if (videoWashable.playing) videoWashable.pause();
+};
+
+videoKeypoints.onclick = function() {
+  this.setAttribute('controls', 'controls');
+  this.play();
+  if (videoTrailer.playing) videoTrailer.pause();
+  if (videoWashable.playing) videoWashable.pause();
+};
+
+videoWashable.onclick = function() {
+  this.setAttribute('controls', 'controls');
+  this.play();
+  if (videoTrailer.playing) videoTrailer.pause();
+  if (videoKeypoints.playing) videoKeypoints.pause();
+};
