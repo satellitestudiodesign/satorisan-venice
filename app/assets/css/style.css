@@ -717,9 +717,14 @@ ul {
     -ms-grid-rows: 15rem 18rem;
         grid-template-rows: 15rem 18rem;
     height: auto; }
-  .detail {
+  .full-shoe {
     -ms-grid-column-span: 2;
         grid-column-end: span 2; }
+  .detail {
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    -ms-grid-column: 2;
+        grid-column-start: 2; }
   img {
     max-height: 30rem; }
   .two-columns {
@@ -748,7 +753,7 @@ ul {
     height: 50vh;
     z-index: 0; }
     .cover button {
-      display: none; } }
+      bottom: 50vh; } }
 
 @media only screen and (min-width: 1500px) {
   html {

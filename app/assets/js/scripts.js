@@ -53,7 +53,7 @@
   $('.lazy').unveil(null, function () {
     $(this).load(function () {
       this.style.opacity = 1;
-      this.style.height = 'auto';
+      if($(this).parent().attr('id') === 'lookbook') this.style.height = 'auto';
     });
   });
 

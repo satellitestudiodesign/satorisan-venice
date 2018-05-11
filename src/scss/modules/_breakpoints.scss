@@ -40,8 +40,12 @@
         grid-template-rows: 15rem 18rem;
         height: auto;
     }
-    .detail {
+    .full-shoe {
         grid-column-end: span 2;
+    }
+    .detail {
+        grid-row-start: 1;
+        grid-column-start: 2;
     }
     img {
         max-height: 30rem;
@@ -87,7 +91,7 @@
         height: 50vh;
         z-index: 0;
         button {
-            display: none;
+            bottom: 50vh;
         }
     }
 }
