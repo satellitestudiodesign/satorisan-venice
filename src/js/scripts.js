@@ -7,10 +7,8 @@
   });
 
   // Internal links with animated scroll
-  $('a[href*="#"]').on('click', function (e) {
+  $('nav > a[href*="#"]').on('click', function (e) {
     e.preventDefault();
-    $('.current').removeClass('current');
-    $(this).addClass('current');
     var offset = ($(window).height() - $($(this).attr('href')).height()) / 2;
     if (offset < 0) { offset = 0; }
     $('html, body').animate({

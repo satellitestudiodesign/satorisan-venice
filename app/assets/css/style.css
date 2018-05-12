@@ -433,8 +433,8 @@ textarea {
   .sidebar .toggle {
     border: none;
     display: block;
-    width: 5rem;
-    height: 5rem;
+    width: 4.4rem;
+    height: 4.4rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
     position: fixed;
     top: 1rem;
@@ -553,6 +553,27 @@ section {
     text-transform: uppercase;
     cursor: pointer;
     padding: 1rem 2rem; }
+  .cover .language-selector {
+    position: absolute;
+    background: white;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    right: 1rem;
+    top: 1rem;
+    color: lightgrey; }
+    .cover .language-selector a {
+      display: block;
+      text-decoration: none;
+      color: initial;
+      padding: 1rem;
+      width: 4.4rem;
+      text-align: center; }
+      .cover .language-selector a.current {
+        font-weight: bold;
+        color: #8CBF3C; }
+      .cover .language-selector a:hover {
+        font-weight: bold; }
+      .cover .language-selector a:not(:first-child) {
+        border-top: solid 1px lightgrey; }
 
 .lazy {
   opacity: 0;
@@ -688,7 +709,8 @@ ul {
 @media only screen and (max-width: 900px) {
   .main {
     left: 0;
-    width: 100%; }
+    width: 100%;
+    overflow-x: hidden; }
   .sidebar {
     z-index: 6;
     position: fixed;
@@ -750,10 +772,12 @@ ul {
   #useexamples h3 {
     color: initial; }
   .cover {
-    height: 50vh;
-    z-index: 0; }
+    height: 60vh;
+    z-index: 0;
+    background-size: cover;
+    background-position-y: top; }
     .cover button {
-      bottom: 50vh; } }
+      bottom: 40vh; } }
 
 @media only screen and (min-width: 1500px) {
   html {

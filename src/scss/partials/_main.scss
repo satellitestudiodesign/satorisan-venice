@@ -122,6 +122,32 @@ section {
         cursor: pointer;
         padding: 1rem 2rem;
     }
+    .language-selector {
+        position: absolute;
+        background: white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+        right: 1rem;
+        top: 1rem;
+        color: lightgrey;
+        a {
+            display: block;
+            text-decoration: none;
+            color: initial;
+            padding: 1rem;
+            width: 4.4rem;
+            text-align: center;
+            &.current {
+                font-weight: bold;
+                color: $brand-green;
+            }
+            &:hover {
+                font-weight: bold;
+            }
+            &:not(:first-child) {
+                border-top: solid 1px lightgrey;
+            }
+        }
+    }
 }
 
 .lazy {

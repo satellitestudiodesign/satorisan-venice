@@ -2,6 +2,7 @@
     .main {
         left: 0;
         width: 100%;
+        overflow-x: hidden;
     }
     .sidebar {
         z-index: 6;
@@ -88,10 +89,12 @@
         }
     }
     .cover {
-        height: 50vh;
+        height: 60vh;
         z-index: 0;
+        background-size: cover;
+        background-position-y: top;
         button {
-            bottom: 50vh;
+            bottom: 40vh;
         }
     }
 }
