@@ -662,6 +662,7 @@ ul {
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   padding: 2rem; }
   .catalog-index h2 {
     margin: 2rem 0; }

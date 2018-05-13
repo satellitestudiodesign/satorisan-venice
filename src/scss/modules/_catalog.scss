@@ -4,6 +4,7 @@
     display: flex;
     // min-width: 90rem;
     overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
     padding: 2rem;
     h2 {
         margin: 2rem 0;
