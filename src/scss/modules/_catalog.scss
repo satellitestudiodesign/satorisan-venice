@@ -1,10 +1,7 @@
-
-
 .catalog-index {
     display: flex;
-    // min-width: 90rem;
     overflow-x: auto;
-	-webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: touch;
     padding: 2rem;
     h2 {
         margin: 2rem 0;
@@ -44,15 +41,14 @@
     -ms-grid-columns: 20rem 1fr 1fr;
     height: 15rem;
     overflow: hidden;
-    
     .info {
         padding: 2rem;
         p {
             margin: 0;
         }
     }
-
-    .full-shoe, .detail {
+    .full-shoe,
+    .detail {
         display: block;
         height: 100%;
         width: 100%;

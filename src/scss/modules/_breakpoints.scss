@@ -32,6 +32,32 @@
             transform: none;
         }
     }
+    .catalog {
+        .arrow {
+            position: absolute;
+            margin-top: 10%;
+            width: 3rem;
+            height: 6rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+            background-size: 2.5rem;
+            background-repeat: no-repeat;
+            background-color: white;
+            &.--left {
+                background-image: url('../img/arrow-left.png');
+                background-position: left center;
+                border-radius: 0 8rem 8rem 0;
+            }
+            &.--right {
+                right: 0;
+                background-image: url('../img/arrow-right.png');
+                background-position: right center;
+                border-radius: 8rem 0 0 8rem;
+            }
+            &.--hidden {
+                display: none;
+            }
+        }
+    }
     .catalog-index {
         padding: 0 0 0 2rem;
     }

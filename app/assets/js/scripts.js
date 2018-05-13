@@ -62,6 +62,30 @@ function toggleMobileMenu() {
   $('.toggle').toggleClass('open');
 }
 
+
+var catalogSlider = $('.catalog-index');
+
+function moveCarrouselRight() {
+  catalogSlider.animate({
+    scrollLeft: catalogSlider.scrollLeft() + ($('.catalog-card').width() + 20)
+  }, 500);
+}
+
+function moveCarrouselLeft() {
+  catalogSlider.animate({
+    scrollLeft: catalogSlider.scrollLeft() - ($('.catalog-card').width() + 20)
+  }, 500);
+}
+
+catalogSlider.on('scroll', function () {
+  if (catalogSlider.scrollLeft() === 0) $('.--left').addClass('--hidden');
+  else $('.--left').removeClass('--hidden');
+  if (catalogSlider.scrollLeft() + catalogSlider.innerWidth() === catalogSlider[0].scrollWidth) $('.--right').addClass('--hidden');
+  else $('.--right').removeClass('--hidden');
+});
+
+
+
 // Make playing on video stop others
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
@@ -94,3 +118,4 @@ videoWashable.onclick = function() {
   if (videoTrailer.playing) videoTrailer.pause();
   if (videoKeypoints.playing) videoKeypoints.pause();
 };
+

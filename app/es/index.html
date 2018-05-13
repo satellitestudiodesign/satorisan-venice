@@ -24,11 +24,11 @@
 <body>
 
   <div class="cover">
-      <div class="language-selector">
-          <a class="language current" href="es">ES</a>
-          <a class="language" href="en">EN</a>
-          <a class="language" href="it">IT</a>
-      </div>
+    <div class="language-selector">
+      <a class="language current" href="es">ES</a>
+      <a class="language" href="en">EN</a>
+      <a class="language" href="it">IT</a>
+    </div>
     <button class="cta" id="main-cta" onclick="$('html, body').animate({scrollTop: $('#venice').offset().top - 50}, 500);">
       DESCÚBRELO
     </button>
@@ -132,7 +132,7 @@
       </section>
 
       <section id="washable" class="one-column">
-        <video id="video-washable" src="assets/video/washSD.mp4" poster="assets/img/wash-cover.jpg" controlsList="nodownload" ></video>
+        <video id="video-washable" src="assets/video/washSD.mp4" poster="assets/img/wash-cover.jpg" controlsList="nodownload"></video>
         <h2>A Wash-N-Walk Smart Creation</h2>
         <p>Usar, lavar y volver a empezar. Puedes lavar tus Venice en lavadora con un programa frío para dejarlas como nuevas
           siempre que quieras.
@@ -147,6 +147,8 @@
         <p>La familia Venice está disponible en 17 colores repartidos en
           <strong>4 grupos de materiales de alta calidad</strong>:</p>
 
+        <span class="arrow --left --hidden" onclick="moveCarrouselLeft()"></span>
+        <span class="arrow --right" onclick="moveCarrouselRight()"></span>
         <div class="catalog-index">
           <div class="catalog-card">
             <img class="lazy" data-src="../assets/img/catalog/VENICE-LINEN-EARTH-07.jpg" alt="">
