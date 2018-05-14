@@ -36,9 +36,10 @@
     </button>
   </div>
 
+  <button onclick="toggleMobileMenu()" class="toggle"></button>
+
   <header class="sidebar">
     <img class="logo" id="logo-venice" src="../assets/img/logo-venice.jpg" alt="Venice Collection Logo" onclick="$('html, body').animate({scrollTop: 0}, 500);">
-    <button onclick="toggleMobileMenu()" class="toggle"></button>
     <nav class="nav" role="navigation">
 
       <a class="section current" href="#venice">VENICE</a>
@@ -71,8 +72,8 @@
     <div class="content-wrapper">
 
       <section id="venice" class="one-column">
-        <video id="video-trailer" poster="assets/img/caratula-venice.jpg" controlsList="nodownload">
-          <source src="assets/video/venice trailer xtraSD.mp4" type="video/mp4">
+        <video id="video-trailer" poster="../assets/img/caratula-venice.jpg" controlsList="nodownload">
+          <source src="../assets/video/venice trailer xtraSD.mp4" type="video/mp4">
         </video>
         <h2>Experience Untaggable Confort</h2>
         <p>Venice es la primera “zapa-sandal” del mercado, diseñada para ir sin calcetines y especialmente cómoda para caminar
@@ -93,7 +94,9 @@
       </section>
 
       <section id="keypoints" class="one-column">
-        <video id="video-keypoints" src="../assets/video/Features SD.mp4" poster="../assets/img/caratula-features.jpg" controlsList="nodownload"></video>
+        <video id="video-keypoints" poster="../assets/img/caratula-features.jpg" controlsList="nodownload">
+          <source src="../assets/video/Features SD.mp4" type="video/mp4">
+        </video>
         <h2>Key Points</h2>
         <div class="two-columns">
           <ul>
@@ -136,7 +139,9 @@
       </section>
 
       <section id="washable" class="one-column">
-        <video id="video-washable" src="../assets/video/washSD.mp4" poster="../assets/img/wash-cover.jpg" controlsList="nodownload"></video>
+        <video id="video-washable" poster="../assets/img/wash-cover.jpg" controlsList="nodownload">
+          <source src="../assets/video/washSD.mp4" type="video/mp4">
+        </video>
         <h2>A Wash-N-Walk Smart Creation</h2>
         <p>Usar, lavar y volver a empezar. Puedes lavar tus Venice en lavadora con un programa frío para dejarlas como nuevas
           siempre que quieras.

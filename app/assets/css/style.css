@@ -411,7 +411,8 @@ textarea {
   width: 17rem;
   float: left;
   position: absolute;
-  overflow: hidden;
+  overflow-y: auto;
+  overflow-x: visible;
   -webkit-overflow-scrolling: touch;
   left: 0;
   transition: left 200ms linear; }
@@ -431,25 +432,26 @@ textarea {
     .sidebar.fixed #logo-venice {
       -ms-transform: translateY(0);
           transform: translateY(0); }
-  .sidebar .toggle {
-    z-index: 10000;
-    border: none;
-    width: 4.4rem;
-    height: 4.4rem;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-    position: fixed;
-    top: 1rem;
-    left: 1rem;
-    background: url("../img/menu.png") center center, white;
-    background-size: 60% 60%;
-    background-repeat: no-repeat;
-    display: none;
-    transition: left 200ms linear;
-    cursor: pointer; }
-    .sidebar .toggle:focus {
-      outline: 0; }
-    .sidebar .toggle.open {
-      left: 18rem; }
+
+.toggle {
+  z-index: 10000;
+  border: none;
+  width: 4.4rem;
+  height: 4.4rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  background: url("../img/menu.png") center center, white;
+  background-size: 60% 60%;
+  background-repeat: no-repeat;
+  display: none;
+  transition: left 200ms linear;
+  cursor: pointer; }
+  .toggle:focus {
+    outline: 0; }
+  .toggle.open {
+    left: 18rem; }
 
 .main {
   position: absolute;
@@ -729,8 +731,8 @@ ul {
     .sidebar .logo#logo-venice {
       -ms-transform: translateY(0);
           transform: translateY(0); }
-    .sidebar .toggle {
-      display: block; }
+  .toggle {
+    display: block; }
   h1 {
     font-size: 4.2rem;
     letter-spacing: .05em; }

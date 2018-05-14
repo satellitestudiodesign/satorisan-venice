@@ -25,9 +25,20 @@
 
 <body>
 
-  <header class="sidebar">
+  <div class="cover">
+    <div class="language-selector">
+      <a class="language current">ES</a>
+      <a class="language" href="en">EN</a>
+      <a class="language" href="it">IT</a>
+    </div>
+    <button class="cta" id="main-cta" onclick="$('html, body').animate({scrollTop: $('#venice').offset().top - 50}, 500);">
+      DESCÚBRELO
+    </button>
+  </div>
 
-    <button onclick="toggleMobileMenu()" class="toggle"></button>
+  <button onclick="toggleMobileMenu()" class="toggle"></button>
+
+  <header class="sidebar">
 
     <img class="logo" id="logo-venice" src="assets/img/logo-venice.jpg" alt="Venice Collection Logo" onclick="$('html, body').animate({scrollTop: 0}, 500);">
 
@@ -58,17 +69,6 @@
     </nav>
     <img class="logo" src="assets/img/logo-satorisan.jpg" alt="Venice Collection Logo">
   </header>
-
-  <div class="cover">
-    <div class="language-selector">
-      <a class="language current">ES</a>
-      <a class="language" href="en">EN</a>
-      <a class="language" href="it">IT</a>
-    </div>
-    <button class="cta" id="main-cta" onclick="$('html, body').animate({scrollTop: $('#venice').offset().top - 50}, 500);">
-      DESCÚBRELO
-    </button>
-  </div>
 
   <main class="main" role="main">
     <div class="content-wrapper">
