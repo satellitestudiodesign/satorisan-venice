@@ -391,7 +391,7 @@ textarea {
   /* 2 */ }
 
 .nav {
-  margin-left: 3rem; }
+  margin-left: 2rem; }
   .nav a {
     display: block;
     margin: 1.5rem 0 0;
@@ -463,7 +463,6 @@ textarea {
 section {
   margin: 20vh 0; }
   section > p {
-    max-width: 60ch;
     margin: 2rem; }
 
 .one-column {
@@ -666,7 +665,9 @@ ul {
   -webkit-overflow-scrolling: touch;
   padding: 2rem; }
   .catalog-index h2 {
-    margin: 2rem 0; }
+    margin: 1rem 0; }
+  .catalog-index p {
+    margin: 0 0 3rem 0; }
 
 .catalog-card {
   width: 25%;

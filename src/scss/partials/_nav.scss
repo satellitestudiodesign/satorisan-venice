@@ -1,11 +1,9 @@
 .nav {
-    margin-left: 3rem;
-    
+    margin-left: 2rem;
     a {
         display: block;
         margin: 1.5rem 0 0;
         text-decoration: none;
-       
         &.section {
             color: $brand-green;
             &:hover,
@@ -13,7 +11,6 @@
                 font-weight: 500;
             }
         }
-       
         &.subsection {
             color: initial;
             margin: 0;
