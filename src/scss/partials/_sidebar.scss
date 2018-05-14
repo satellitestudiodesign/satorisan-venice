@@ -4,6 +4,7 @@
     float: left;
     position: absolute;
     overflow: hidden;
+    -webkit-overflow-scrolling: touch;
     left: 0;
     transition: left 200ms linear;
     .logo {
@@ -12,7 +13,7 @@
         width: 100%;
         height: auto;
         transition: transform 300ms ease-out;
-        &#logo-venice{
+        &#logo-venice {
             transform: translateY(-100%);
         }
     }
@@ -25,11 +26,11 @@
         }
     }
     .toggle {
+        z-index: 10000;
         border: none;
-        display: block;
         width: 4.4rem;
         height: 4.4rem;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
         position: fixed;
         top: 1rem;
         left: 1rem;

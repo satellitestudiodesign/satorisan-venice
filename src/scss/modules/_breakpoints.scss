@@ -5,7 +5,7 @@
         overflow-x: hidden;
     }
     .sidebar {
-        z-index: 6;
+        z-index: 400000;
         position: fixed;
         background: white;
         top: 0;
@@ -26,15 +26,18 @@
     }
     h1 {
         font-size: 4.2rem;
+        letter-spacing: .05em;
     }
     h2 {
         font-size: 3rem;
+        letter-spacing: .05em;
         &.inline {
             transform: none;
         }
     }
     .catalog {
         .arrow {
+            z-index: 10;
             position: absolute;
             margin-top: 10%;
             width: 3rem;
@@ -102,7 +105,9 @@
         }
     }
     #lookbook {
-        h1,
+        h1 {
+            color: #685d41;
+        }
         p {
             color: initial;
         }
@@ -114,11 +119,12 @@
     }
     .cover {
         height: 60vh;
-        z-index: 0;
+        z-index: 10;
         background-size: cover;
         background-position: center bottom;
         button {
-            bottom: 40vh;
+            top: 50vh;
+            bottom: unset;
         }
     }
 }

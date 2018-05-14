@@ -412,6 +412,7 @@ textarea {
   float: left;
   position: absolute;
   overflow: hidden;
+  -webkit-overflow-scrolling: touch;
   left: 0;
   transition: left 200ms linear; }
   .sidebar .logo {
@@ -431,8 +432,8 @@ textarea {
       -ms-transform: translateY(0);
           transform: translateY(0); }
   .sidebar .toggle {
+    z-index: 10000;
     border: none;
-    display: block;
     width: 4.4rem;
     height: 4.4rem;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -716,7 +717,7 @@ ul {
     width: 100%;
     overflow-x: hidden; }
   .sidebar {
-    z-index: 6;
+    z-index: 400000;
     position: fixed;
     background: white;
     top: 0;
@@ -731,13 +732,16 @@ ul {
     .sidebar .toggle {
       display: block; }
   h1 {
-    font-size: 4.2rem; }
+    font-size: 4.2rem;
+    letter-spacing: .05em; }
   h2 {
-    font-size: 3rem; }
+    font-size: 3rem;
+    letter-spacing: .05em; }
     h2.inline {
       -ms-transform: none;
           transform: none; }
   .catalog .arrow {
+    z-index: 10;
     position: absolute;
     margin-top: 10%;
     width: 3rem;
@@ -790,18 +794,20 @@ ul {
     margin: 0 1rem; }
   .full-images img {
     height: auto; }
-  #lookbook h1,
+  #lookbook h1 {
+    color: #685d41; }
   #lookbook p {
     color: initial; }
   #useexamples h3 {
     color: initial; }
   .cover {
     height: 60vh;
-    z-index: 0;
+    z-index: 10;
     background-size: cover;
     background-position: center bottom; }
     .cover button {
-      bottom: 40vh; } }
+      top: 50vh;
+      bottom: unset; } }
 
 @media only screen and (min-width: 1500px) {
   html {

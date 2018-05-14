@@ -81,8 +81,8 @@ catalogSlider.on('scroll', function () {
 // Make playing on video stop others
 
 Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
-  get: function(){
-      return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+  get: function () {
+    return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
   }
 })
 
@@ -90,21 +90,27 @@ var videoTrailer = document.getElementById('video-trailer');
 var videoKeypoints = document.getElementById('video-keypoints');
 var videoWashable = document.getElementById('video-washable');
 
-videoTrailer.onclick = function() {
+if (/(iPad|iPhone|iPod)/.test(navigator.userAgent)) {
+  videoTrailer.setAttribute('controls', true);
+  videoKeypoints.setAttribute('controls', true);
+  videoWashable.setAttribute('controls', true);
+}
+
+videoTrailer.onclick = function () {
   this.setAttribute('controls', 'controls');
   this.play();
   if (videoKeypoints.playing) videoKeypoints.pause();
   if (videoWashable.playing) videoWashable.pause();
 };
 
-videoKeypoints.onclick = function() {
+videoKeypoints.onclick = function () {
   this.setAttribute('controls', 'controls');
   this.play();
   if (videoTrailer.playing) videoTrailer.pause();
   if (videoWashable.playing) videoWashable.pause();
 };
 
-videoWashable.onclick = function() {
+videoWashable.onclick = function () {
   this.setAttribute('controls', 'controls');
   this.play();
   if (videoTrailer.playing) videoTrailer.pause();
