@@ -729,10 +729,12 @@ ul {
     .sidebar .toggle {
       display: block; }
   h1 {
-    font-size: 6rem; }
-  h2.inline {
-    -ms-transform: none;
-        transform: none; }
+    font-size: 4.2rem; }
+  h2 {
+    font-size: 3rem; }
+    h2.inline {
+      -ms-transform: none;
+          transform: none; }
   .catalog .arrow {
     position: absolute;
     margin-top: 10%;
@@ -797,9 +799,9 @@ ul {
     height: 60vh;
     z-index: 0;
     background-size: cover;
-    background-position-y: top; }
+    background-position: center bottom; }
     .cover button {
-      bottom: 40vh; } }
+      bottom: 30vh; } }
 
 @media only screen and (min-width: 1500px) {
   html {

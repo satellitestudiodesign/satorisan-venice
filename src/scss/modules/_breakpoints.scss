@@ -25,9 +25,10 @@
         }
     }
     h1 {
-        font-size: 6rem;
+        font-size: 4.2rem;
     }
     h2 {
+        font-size: 3rem;
         &.inline {
             transform: none;
         }
@@ -118,9 +119,9 @@
         height: 60vh;
         z-index: 0;
         background-size: cover;
-        background-position-y: top;
+        background-position: center bottom;
         button {
-            bottom: 40vh;
+            bottom: 30vh;
         }
     }
 }
