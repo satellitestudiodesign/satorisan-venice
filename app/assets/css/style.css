@@ -801,7 +801,7 @@ ul {
     background-size: cover;
     background-position: center bottom; }
     .cover button {
-      bottom: 30vh; } }
+      bottom: 40vh; } }
 
 @media only screen and (min-width: 1500px) {
   html {
