@@ -771,8 +771,6 @@ ul {
         grid-row-start: 1;
     -ms-grid-column: 2;
         grid-column-start: 2; }
-  img {
-    max-height: 30rem; }
   .two-columns {
     display: -ms-flexbox;
     display: flex;
