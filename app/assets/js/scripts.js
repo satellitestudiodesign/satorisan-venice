@@ -55,6 +55,8 @@
     });
   });
 
+  $(function () { objectFitImages() });
+
 })(jQuery, window, document);
 
 function toggleMobileMenu() {

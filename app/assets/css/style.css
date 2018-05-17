@@ -1,3 +1,9 @@
+/*
+  This mixin can be used to set the object-fit:
+  @include object-fit(cover);
+  or object-fit and object-position:
+  @include object-fit(cover, center);
+*/
 .clear:before, .clear:after {
   content: ' ';
   display: table; }
@@ -711,7 +717,11 @@ ul {
     display: block;
     height: 100%;
     width: 100%;
-    object-fit: cover; }
+    object-fit: cover;
+    object-position: center;
+    object-fit: cover;
+    object-position: center;
+    font-family: "object-fit: cover; object-position: center"; }
 
 @media only screen and (max-width: 900px) {
   .main {
@@ -766,14 +776,14 @@ ul {
   .catalog-index {
     padding: 0 0 0 2rem; }
   .catalog-row {
-    grid-template-columns: 1fr 1fr;
     -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     -ms-grid-rows: 15rem 18rem;
-        grid-template-rows: 15rem 18rem;
+    grid-template-rows: 15rem 18rem;
     height: auto; }
   .full-shoe {
     -ms-grid-column-span: 2;
-        grid-column-end: span 2; }
+    grid-column-end: span 2; }
   .detail {
     -ms-grid-row: 1;
         grid-row-start: 1;

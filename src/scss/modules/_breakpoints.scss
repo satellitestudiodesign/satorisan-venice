@@ -68,12 +68,14 @@
         padding: 0 0 0 2rem;
     }
     .catalog-row {
-        grid-template-columns: 1fr 1fr;
         -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        -ms-grid-rows: 15rem 18rem;
         grid-template-rows: 15rem 18rem;
         height: auto;
     }
     .full-shoe {
+        -ms-grid-column-span: 2;
         grid-column-end: span 2;
     }
     .detail {

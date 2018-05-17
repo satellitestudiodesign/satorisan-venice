@@ -39,6 +39,7 @@
     background: #efefef;
     border: solid 1px #efefef;
     margin-bottom: 1rem;
+    display: -ms-grid;
     display: grid;
     grid-template-columns: 20rem 1fr 1fr;
     -ms-grid-columns: 20rem 1fr 1fr;
@@ -56,5 +57,7 @@
         height: 100%;
         width: 100%;
         object-fit: cover;
+        object-position: center;
+        @include object-fit(cover, center);
     }
 }
